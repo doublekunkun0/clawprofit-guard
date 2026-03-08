@@ -3,7 +3,7 @@
 Language:
 
 - English: `README.md`
-- 中文版: [README.zh-CN.md](/Users/kb/Desktop/AI自媒体视频/README.zh-CN.md)
+- 中文版: [README.zh-CN.md](./README.zh-CN.md)
 
 中文速览：
 
@@ -231,11 +231,11 @@ Note:
 
 Related contest docs:
 
-- [docs/PRD_v1.md](/Users/kb/Desktop/AI自媒体视频/docs/PRD_v1.md)
-- [docs/DEMO_VIDEO_60S.md](/Users/kb/Desktop/AI自媒体视频/docs/DEMO_VIDEO_60S.md)
-- [docs/CONTEST_SUBMISSION_CHECKLIST.md](/Users/kb/Desktop/AI自媒体视频/docs/CONTEST_SUBMISSION_CHECKLIST.md)
-- [docs/FIRST_PRIZE_SUBMISSION.md](/Users/kb/Desktop/AI自媒体视频/docs/FIRST_PRIZE_SUBMISSION.md)
-- [openclaw/README.md](/Users/kb/Desktop/AI自媒体视频/openclaw/README.md)
+- [docs/PRD_v1.md](./docs/PRD_v1.md)
+- [docs/DEMO_VIDEO_60S.md](./docs/DEMO_VIDEO_60S.md)
+- [docs/CONTEST_SUBMISSION_CHECKLIST.md](./docs/CONTEST_SUBMISSION_CHECKLIST.md)
+- [docs/FIRST_PRIZE_SUBMISSION.md](./docs/FIRST_PRIZE_SUBMISSION.md)
+- [openclaw/README.md](./openclaw/README.md)
 
 ## Run Tests
 

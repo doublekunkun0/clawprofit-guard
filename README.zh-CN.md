@@ -3,7 +3,7 @@
 语言版本：
 
 - 中文版：`README.zh-CN.md`
-- English: [README.md](/Users/kb/Desktop/AI自媒体视频/README.md)
+- English: [README.md](./README.md)
 
 ClawProfit Guard 是一个面向 `Binance USD-M Futures` 的交易前 AI 风控 Agent。
 
@@ -161,11 +161,11 @@ curl -s -X POST http://127.0.0.1:8080/v1/binance/live-open-order \
 
 ## 参赛材料
 
-- [产品 PRD](/Users/kb/Desktop/AI自媒体视频/docs/PRD_v1.md)
-- [60 秒视频脚本](/Users/kb/Desktop/AI自媒体视频/docs/DEMO_VIDEO_60S.md)
-- [提交清单](/Users/kb/Desktop/AI自媒体视频/docs/CONTEST_SUBMISSION_CHECKLIST.md)
-- [冠军版提交文案](/Users/kb/Desktop/AI自媒体视频/docs/FIRST_PRIZE_SUBMISSION.md)
-- [OpenClaw 集成说明](/Users/kb/Desktop/AI自媒体视频/openclaw/README.md)
+- [产品 PRD](./docs/PRD_v1.md)
+- [60 秒视频脚本](./docs/DEMO_VIDEO_60S.md)
+- [提交清单](./docs/CONTEST_SUBMISSION_CHECKLIST.md)
+- [冠军版提交文案](./docs/FIRST_PRIZE_SUBMISSION.md)
+- [OpenClaw 集成说明](./openclaw/README.md)
 
 ## 运行测试
 
