@@ -1,0 +1,44 @@
+{
+  "decision": "BLOCK",
+  "risk_score": 66.0,
+  "reasons": [
+    "Leverage 14.00 exceeds max 5.00.",
+    "Position size is too large versus account equity.",
+    "Estimated loss at stop (2.42%) exceeds max risk per trade 0.80%.",
+    "Reward/risk ratio 0.54x is below required 2.00x.",
+    "Leverage risk is elevated for current guardrail profile.",
+    "Position concentration is high relative to account equity.",
+    "Stop-loss distance implies meaningful single-trade downside.",
+    "Reward/risk ratio is below the current profile requirement."
+  ],
+  "blockers": [
+    "Leverage 14.00 exceeds max 5.00.",
+    "Position size is too large versus account equity.",
+    "Estimated loss at stop (2.42%) exceeds max risk per trade 0.80%.",
+    "Reward/risk ratio 0.54x is below required 2.00x."
+  ],
+  "metric_breakdown": {
+    "leverage_risk": 100.0,
+    "volatility_risk": 51.67,
+    "concentration_risk": 85.0,
+    "liquidity_risk": 26.2,
+    "behavior_risk": 21.5,
+    "risk_per_trade_pct": 2.42,
+    "reward_risk_ratio": 0.54,
+    "target_reward_risk_ratio": 2.0,
+    "liquidation_buffer_pct": 6.07
+  },
+  "suggested_plan": {
+    "leverage": 3.0,
+    "position_notional_usdt": 1101.22,
+    "stop_loss_price": 90000.0,
+    "take_profit_price": 93900.0,
+    "note": "Hard guardrail triggered. Apply suggested sizing before any execution."
+  },
+  "profile_context": {
+    "mode": "profile_assisted",
+    "profile": "conservative",
+    "profile_score": 12.2,
+    "auto_adjustments": []
+  }
+}

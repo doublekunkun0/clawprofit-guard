@@ -1,0 +1,171 @@
+{
+  "bundle_version": "2.0",
+  "agent": {
+    "name": "ClawProfit Guard",
+    "role": "Binance futures pre-trade risk agent",
+    "system_prompt_file": "../docs/OPENCLAW_SYSTEM_PROMPT.md"
+  },
+  "base_url": "http://127.0.0.1:8080",
+  "tools": [
+    {
+      "name": "recommend_risk_profile",
+      "method": "POST",
+      "path": "/v1/profile/recommend",
+      "purpose": "Derive a conservative, balanced, or aggressive profile plus guardrails from quiz answers and recent behavior.",
+      "required_inputs": [
+        "quiz.experience_level",
+        "quiz.risk_tolerance",
+        "quiz.leverage_preference",
+        "quiz.stop_loss_discipline",
+        "quiz.revenge_tendency",
+        "quiz.trading_frequency",
+        "quiz.max_drawdown_comfort_pct",
+        "behavior.consecutive_losses",
+        "behavior.trades_last_24h",
+        "behavior.day_pnl_pct"
+      ],
+      "primary_outputs": [
+        "profile",
+        "profile_score",
+        "issues",
+        "coaching",
+        "guardrails"
+      ]
+    },
+    {
+      "name": "sync_account_snapshot",
+      "method": "GET",
+      "path": "/v1/binance/account-snapshot",
+      "query_params": [
+        "symbol",
+        "profile"
+      ],
+      "purpose": "Load Binance USD-M Futures account context or safe local fallback.",
+      "primary_outputs": [
+        "exchange_context",
+        "account",
+        "behavior",
+        "auto_fill",
+        "agent_context",
+        "briefing"
+      ]
+    },
+    {
+      "name": "sync_market_snapshot",
+      "method": "GET",
+      "path": "/v1/binance/market-snapshot",
+      "query_params": [
+        "symbol",
+        "side",
+        "profile"
+      ],
+      "purpose": "Load Binance USD-M Futures market context or safe local fallback.",
+      "primary_outputs": [
+        "exchange_context",
+        "market",
+        "suggested_trade",
+        "warning"
+      ]
+    },
+    {
+      "name": "evaluate_trade_plan",
+      "method": "POST",
+      "path": "/v1/evaluate",
+      "purpose": "Score a planned futures trade before execution and return ALLOW/WARN/BLOCK with a safer repair plan.",
+      "required_inputs": [
+        "trade.symbol",
+        "trade.side",
+        "trade.entry_price",
+        "trade.stop_loss_price",
+        "trade.take_profit_price",
+        "trade.leverage",
+        "trade.position_notional_usdt",
+        "trade.account_equity_usdt",
+        "market.volatility_24h_pct",
+        "market.bid_ask_spread_bps",
+        "market.liquidity_depth_score",
+        "behavior.consecutive_losses",
+        "behavior.trades_last_24h",
+        "behavior.day_pnl_pct"
+      ],
+      "primary_outputs": [
+        "decision",
+        "risk_score",
+        "reasons",
+        "blockers",
+        "metric_breakdown",
+        "suggested_plan",
+        "profile_context"
+      ]
+    },
+    {
+      "name": "check_futures_order_readiness",
+      "method": "POST",
+      "path": "/v1/binance/demo-order-test",
+      "purpose": "Build a Binance USD-M Futures order preview and validate execution readiness before live trading.",
+      "required_inputs": [
+        "trade.symbol",
+        "trade.side",
+        "trade.entry_price",
+        "trade.stop_loss_price",
+        "trade.take_profit_price",
+        "trade.leverage",
+        "trade.position_notional_usdt",
+        "trade.margin_mode"
+      ],
+      "primary_outputs": [
+        "status",
+        "mode",
+        "message",
+        "preview",
+        "exchange_context",
+        "credentials"
+      ]
+    },
+    {
+      "name": "trial_live_limit_order",
+      "method": "POST",
+      "path": "/v1/binance/live-order",
+      "purpose": "Place a real USD-M Futures limit order trial and cancel it immediately.",
+      "required_inputs": [
+        "trade.symbol",
+        "trade.side",
+        "trade.entry_price",
+        "trade.stop_loss_price",
+        "trade.take_profit_price",
+        "trade.leverage",
+        "trade.position_notional_usdt",
+        "trade.margin_mode"
+      ],
+      "primary_outputs": [
+        "status",
+        "message",
+        "execution",
+        "cancel"
+      ]
+    },
+    {
+      "name": "open_futures_position",
+      "method": "POST",
+      "path": "/v1/binance/live-open-order",
+      "purpose": "Open a real USD-M Futures market position and post stop-loss / take-profit protection orders.",
+      "required_inputs": [
+        "trade.symbol",
+        "trade.side",
+        "trade.entry_price",
+        "trade.stop_loss_price",
+        "trade.take_profit_price",
+        "trade.leverage",
+        "trade.position_notional_usdt",
+        "trade.margin_mode"
+      ],
+      "primary_outputs": [
+        "status",
+        "message",
+        "execution",
+        "protection_orders",
+        "execution_summary"
+      ]
+    }
+  ]
+}

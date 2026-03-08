@@ -1,0 +1,101 @@
+[
+  {
+    "scenario_id": "digital_validation",
+    "scenario_label": "数字验证款",
+    "units": 300,
+    "gross_revenue_min": 5970.0,
+    "gross_revenue_max": 5970.0,
+    "profit_min": -14507.6,
+    "profit_max": 492.4,
+    "break_even_units_min": 274,
+    "break_even_units_max": 1093
+  },
+  {
+    "scenario_id": "digital_validation",
+    "scenario_label": "数字验证款",
+    "units": 500,
+    "gross_revenue_min": 9950.0,
+    "gross_revenue_max": 9950.0,
+    "profit_min": -10846.0,
+    "profit_max": 4154.0,
+    "break_even_units_min": 274,
+    "break_even_units_max": 1093
+  },
+  {
+    "scenario_id": "digital_validation",
+    "scenario_label": "数字验证款",
+    "units": 1000,
+    "gross_revenue_min": 19900.0,
+    "gross_revenue_max": 19900.0,
+    "profit_min": -1692.0,
+    "profit_max": 13308.0,
+    "break_even_units_min": 274,
+    "break_even_units_max": 1093
+  },
+  {
+    "scenario_id": "signed_author",
+    "scenario_label": "传统签约作者",
+    "units": 3000,
+    "gross_revenue_min": 14352.0,
+    "gross_revenue_max": 17940.0,
+    "profit_min": 14352.0,
+    "profit_max": 17940.0,
+    "break_even_units_min": 0,
+    "break_even_units_max": 0
+  },
+  {
+    "scenario_id": "signed_author",
+    "scenario_label": "传统签约作者",
+    "units": 10000,
+    "gross_revenue_min": 47840.0,
+    "gross_revenue_max": 59800.0,
+    "profit_min": 47840.0,
+    "profit_max": 59800.0,
+    "break_even_units_min": 0,
+    "break_even_units_max": 0
+  },
+  {
+    "scenario_id": "self_funded_paper_organic",
+    "scenario_label": "自费纸书自营（自然流量）",
+    "units": 4000,
+    "gross_revenue_min": 20000,
+    "gross_revenue_max": 48000,
+    "profit_min": -130000,
+    "profit_max": -32000,
+    "break_even_units_min": 6667,
+    "break_even_units_max": 30000
+  },
+  {
+    "scenario_id": "self_funded_paper_organic",
+    "scenario_label": "自费纸书自营（自然流量）",
+    "units": 10000,
+    "gross_revenue_min": 50000,
+    "gross_revenue_max": 120000,
+    "profit_min": -100000,
+    "profit_max": 40000,
+    "break_even_units_min": 6667,
+    "break_even_units_max": 30000
+  },
+  {
+    "scenario_id": "self_funded_paper_paid",
+    "scenario_label": "自费纸书自营（投流/达人）",
+    "units": 4000,
+    "gross_revenue_min": 0,
+    "gross_revenue_max": 20000,
+    "profit_min": -150000,
+    "profit_max": -60000,
+    "break_even_units_min": 16000,
+    "break_even_units_max": null
+  },
+  {
+    "scenario_id": "self_funded_paper_paid",
+    "scenario_label": "自费纸书自营（投流/达人）",
+    "units": 10000,
+    "gross_revenue_min": 0,
+    "gross_revenue_max": 50000,
+    "profit_min": -150000,
+    "profit_max": -30000,
+    "break_even_units_min": 16000,
+    "break_even_units_max": null
+  }
+]

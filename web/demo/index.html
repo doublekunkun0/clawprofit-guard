@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClawProfit Guard | Binance Futures AI Risk Agent</title>
+    <link rel="stylesheet" href="/demo/styles.css?v=__CPG_ASSET_VERSION__" />
+    <script>
+      window.__cpgAssetVersion = "__CPG_ASSET_VERSION__";
+    </script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div class="hero-head">
+          <div class="hero-tag">ClawProfit Guard</div>
+          <div class="lang-switch" role="group" aria-label="Language Switch">
+            <button id="lang-zh" class="lang-btn" type="button">中文</button>
+            <button id="lang-en" class="lang-btn" type="button">EN</button>
+          </div>
+        </div>
+        <div class="hero-body">
+          <div class="hero-copy">
+            <h1 data-i18n="hero.title">Binance Futures Pre-Trade AI Risk Agent</h1>
+            <p data-i18n="hero.subtitle">
+              Adaptive risk profiling, live futures account and market sync, execution readiness checks,
+              and bracket protection orders in one guided workflow.
+            </p>
+            <div class="hero-feature-strip">
+              <span class="hero-feature" data-i18n="hero.feature_profile">Adaptive risk profiling</span>
+              <span class="hero-feature" data-i18n="hero.feature_context">Live futures context</span>
+              <span class="hero-feature" data-i18n="hero.feature_bracket">Bracket protection orders</span>
+              <span class="hero-feature" data-i18n="hero.feature_controls">One-click cancel / close</span>
+            </div>
+          </div>
+          <div class="hero-proof-strip">
+            <div class="hero-proof-card">
+              <span class="hero-proof-label" data-i18n="hero.proof_venue_label">Venue</span>
+              <strong data-i18n="hero.proof_venue_value">Binance USD-M Futures</strong>
+            </div>
+            <div class="hero-proof-card">
+              <span class="hero-proof-label" data-i18n="hero.proof_flow_label">Workflow</span>
+              <strong data-i18n="hero.proof_flow_value">Profile -> Evaluate -> Check -> Execute</strong>
+            </div>
+            <div class="hero-proof-card">
+              <span class="hero-proof-label" data-i18n="hero.proof_value_label">Core value</span>
+              <strong data-i18n="hero.proof_value_value">Protect downside before chasing upside</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="agent-shell">
+        <article class="panel agent-panel">
+          <div class="agent-head">
+            <div>
+              <div class="agent-kicker" data-i18n="agent.kicker">Agent Console</div>
+              <h2 data-i18n="agent.title">ClawProfit Agent</h2>
+              <p class="panel-note" data-i18n="agent.note">
+                Live account, live market, daily summary, and next action in one screen.
+              </p>
+            </div>
+            <span id="agent-status-chip" class="status-chip muted" data-i18n="agent.status_booting">
+              Agent booting
+            </span>
+          </div>
+          <div class="agent-grid">
+            <div id="agent-stepper" class="agent-box muted" data-i18n="placeholder.agent_steps">
+              Profile, account sync, market sync, evaluation, and order check will appear here.
+            </div>
+            <div id="account-sync-status" class="agent-box muted" data-i18n="placeholder.account_sync">
+              Account sync waits for Binance USD-M Futures credentials; until then the agent uses safe fallback context.
+            </div>
+            <div id="agent-briefing" class="agent-box muted" data-i18n="placeholder.agent_briefing">
+              Agent briefing will summarize the current profile, account context, and next action.
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="layout-grid">
+        <article class="panel panel-profile">
+          <h2 data-i18n="section.profile_setup">1. Risk Profile Setup</h2>
+          <p class="panel-note" data-i18n="section.profile_note">
+            Use an adaptive, account-aware question bank to locate the user's trading style, then score it.
+          </p>
+          <p class="flow-note" data-i18n="section.profile_flow">
+            The agent asks 4-7 questions based on previous answers and recent account behavior.
+          </p>
+          <div class="wizard-shell">
+            <div id="wizard-progress" class="wizard-progress"></div>
+            <div id="wizard-log" class="wizard-log muted"></div>
+            <div id="wizard-question" class="wizard-question"></div>
+            <div id="wizard-context" class="wizard-context"></div>
+            <div id="wizard-options" class="wizard-options"></div>
+            <div class="wizard-actions">
+              <button id="btn-prev-step" class="btn ghost" type="button" data-i18n="btn.prev_question">
+                Previous
+              </button>
+              <button id="btn-reset-wizard" class="btn ghost" type="button" data-i18n="btn.retake">
+                Retake
+              </button>
+            </div>
+            <div class="confirm-row">
+              <span id="profile-confirm-status" class="status-chip muted" data-i18n="status.await_profile">
+                Awaiting profile generation
+              </span>
+              <button id="btn-confirm-profile" class="btn primary" type="button" data-i18n="btn.confirm_profile">
+                Confirm Profile
+              </button>
+            </div>
+          </div>
+
+          <div class="form-grid compact behavior-box">
+            <label>
+              <span data-i18n="field.consecutive_losses">Consecutive Losses</span>
+              <input id="consecutive_losses" type="number" min="0" value="2" />
+            </label>
+            <label>
+              <span data-i18n="field.trades_last_24h">Trades Last 24h</span>
+              <input id="trades_last_24h" type="number" min="0" value="12" />
+            </label>
+            <label>
+              <span data-i18n="field.day_pnl_pct">Day PnL (%)</span>
+              <input id="day_pnl_pct" type="number" step="0.1" value="-2.8" />
+            </label>
+          </div>
+
+          <input id="experience_level" type="hidden" value="intermediate" />
+          <input id="risk_tolerance" type="hidden" value="medium" />
+          <input id="leverage_preference" type="hidden" value="medium" />
+          <input id="stop_loss_discipline" type="hidden" value="sometimes" />
+          <input id="revenge_tendency" type="hidden" value="sometimes" />
+          <input id="trading_frequency" type="hidden" value="medium" />
+          <input id="max_drawdown_comfort_pct" type="hidden" value="8" />
+          <input id="selected_profile" type="hidden" value="" />
+
+          <div class="inline-result-shell">
+            <div
+              id="profile-result-inline"
+              class="result-box inline-profile-box muted"
+              data-i18n="placeholder.profile_result"
+            >
+              Run profile generation to see output.
+            </div>
+          </div>
+        </article>
+
+        <article class="panel panel-trade">
+          <h2 data-i18n="section.trade_eval">2. Trade Evaluation</h2>
+          <p class="panel-note" data-i18n="section.trade_note">
+            Run pre-trade checks with current profile context.
+          </p>
+          <p id="market-preset-hint" class="panel-tip" data-i18n="section.trade_hint">
+            Demo market values auto-update for BNB / BTC / ETH and remain editable.
+          </p>
+          <div class="form-grid">
+            <label>
+              <span data-i18n="field.symbol">Symbol</span>
+              <select id="symbol"></select>
+            </label>
+            <label>
+              <span data-i18n="field.side">Side</span>
+              <select id="side">
+                <option value="LONG" data-i18n="opt.long">LONG</option>
+                <option value="SHORT" data-i18n="opt.short">SHORT</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="field.entry_price">Entry Price</span>
+              <input id="entry_price" type="number" step="0.0001" value="640" />
+            </label>
+            <label>
+              <span data-i18n="field.stop_loss_price">Stop-loss Price</span>
+              <input id="stop_loss_price" type="number" step="0.0001" value="626" />
+            </label>
+            <label>
+              <span data-i18n="field.take_profit_price">Take-profit Price</span>
+              <input id="take_profit_price" type="number" step="0.0001" value="668" />
+            </label>
+            <label>
+              <span data-i18n="field.leverage">Leverage</span>
+              <input id="leverage" type="number" step="1" min="1" max="125" inputmode="numeric" pattern="[0-9]*" value="9" />
+            </label>
+            <label class="margin-mode-field">
+              <span data-i18n="field.margin_mode">Margin Mode</span>
+              <select id="margin_mode">
+                <option value="CROSSED" data-i18n="opt.crossed">CROSSED</option>
+                <option value="ISOLATED" data-i18n="opt.isolated">ISOLATED</option>
+              </select>
+              <div id="decision-signal-card" class="decision-signal-card pending" aria-live="polite">
+                <div class="decision-signal-head">
+                  <span data-i18n="result.trade_signal">Trade Signal</span>
+                  <span id="decision-signal-badge" class="decision-signal-badge">Await</span>
+                </div>
+                <div class="decision-signal-body">
+                  <strong id="decision-signal-display" class="decision-signal-value">--</strong>
+                  <span id="decision-signal-meta" class="decision-signal-meta">Decision: Await | Risk score: --</span>
+                </div>
+                <div class="decision-signal-meter">
+                  <span id="decision-signal-fill" class="decision-signal-fill"></span>
+                </div>
+              </div>
+              <input id="liquidity_depth_score" type="hidden" value="88" />
+            </label>
+            <label class="position-notional-field">
+              <span data-i18n="field.position_notional_usdt">Position Notional (USDT)</span>
+              <input id="position_notional_usdt" type="number" step="0.1" value="1100" />
+              <div class="position-support-row">
+                <div class="ratio-toolbar">
+                  <span class="ratio-label" data-i18n="field.position_ratio">Position Ratio</span>
+                  <div id="position-ratio-group" class="ratio-group" aria-label="Position Ratio">
+                    <button class="ratio-chip" type="button" data-ratio="0.1">10%</button>
+                    <button class="ratio-chip" type="button" data-ratio="0.3">30%</button>
+                    <button class="ratio-chip" type="button" data-ratio="0.5">50%</button>
+                    <button class="ratio-chip" type="button" data-ratio="0.7">70%</button>
+                    <button class="ratio-chip" type="button" data-ratio="1">100%</button>
+                  </div>
+                </div>
+              </div>
+            </label>
+            <label>
+              <span data-i18n="field.position_margin_usdt">Margin Used (USDT)</span>
+              <input id="position_margin_usdt" type="number" step="0.01" value="122.22" readonly />
+            </label>
+            <label>
+              <span data-i18n="field.account_equity_usdt">Account Equity (USDT)</span>
+              <input id="account_equity_usdt" type="number" step="0.1" value="2200" />
+            </label>
+            <label>
+              <span data-i18n="field.volatility_24h_pct">Volatility 24h (%)</span>
+              <input id="volatility_24h_pct" type="number" step="0.1" value="5.1" />
+            </label>
+            <label>
+              <span data-i18n="field.bid_ask_spread_bps">Spread (bps)</span>
+              <input id="bid_ask_spread_bps" type="number" step="0.1" value="4" />
+            </label>
+          </div>
+          <div
+            id="order-test-result"
+            class="mini-box inline-order-box muted"
+            data-i18n="placeholder.order_test"
+          >
+            Run demo order check to validate the order payload or show preview mode.
+          </div>
+          <div class="btn-row">
+            <button id="btn-evaluate" class="btn primary" data-i18n="btn.evaluate_trade">
+              Evaluate Trade
+            </button>
+            <button
+              id="btn-apply-fix"
+              class="btn ghost"
+              disabled
+              data-i18n="btn.apply_plan"
+            >
+              Apply Suggested Plan
+            </button>
+            <button id="btn-order-test" class="btn ghost" data-i18n="btn.order_test">
+              Futures Order Check
+            </button>
+            <button id="btn-live-order" class="btn ghost" disabled data-i18n="btn.live_order">
+              Live Order Trial
+            </button>
+            <button id="btn-live-open-order" class="btn ghost" disabled data-i18n="btn.live_open_order">
+              Live Open Position
+            </button>
+            <button id="btn-view-current-exposure" class="btn ghost" data-i18n="btn.view_current_exposure">
+              View Current Position / Orders
+            </button>
+          </div>
+          <div class="mini-grid">
+            <div
+              id="market-sync-status"
+              class="mini-box muted"
+              data-i18n="placeholder.market_sync"
+            >
+              Sync market data to load demo prices and suggested stop/take-profit.
+            </div>
+            <div
+              id="current-exposure-status"
+              class="mini-box muted"
+              data-i18n="placeholder.current_exposure"
+            >
+              Click to view the current symbol's live position and active orders.
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="layout-grid result-grid">
+        <article class="panel">
+          <h2 data-i18n="result.profile_result">Profile Result</h2>
+          <div id="profile-result" class="result-box muted" data-i18n="placeholder.profile_result">
+            Run profile generation to see output.
+          </div>
+        </article>
+        <article class="panel">
+          <h2 data-i18n="result.trade_result">Trade Result</h2>
+          <div id="trade-result" class="result-box muted" data-i18n="placeholder.trade_result">
+            Evaluate a trade to see decision, reasons, and suggested plan.
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="/demo/app.js?v=__CPG_ASSET_VERSION__"></script>
+  </body>
+</html>

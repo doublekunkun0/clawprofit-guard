@@ -1,0 +1,36 @@
+{
+  "profile": "conservative",
+  "profile_score": 32.68,
+  "subjective_score": 70.48,
+  "behavior_penalty": 37.8,
+  "behavior_bonus": 0.0,
+  "strengths": [
+    "You are actively engaging with risk controls."
+  ],
+  "issues": [
+    "Stop-loss execution discipline is inconsistent.",
+    "Loss streak risk is elevated."
+  ],
+  "coaching": [
+    "Convert every entry into a bracket order with mandatory stop-loss.",
+    "Cut position size by 50% until one green day is recovered."
+  ],
+  "auto_adjustments": [
+    "Selected profile 'aggressive' tightened to 'conservative' by risk checks."
+  ],
+  "guardrails": {
+    "max_leverage": 5.0,
+    "max_position_vs_equity": 0.9,
+    "max_daily_loss_pct": 3.0,
+    "max_consecutive_losses": 3,
+    "require_stop_loss": true,
+    "max_risk_per_trade_pct": 0.8,
+    "min_reward_risk_ratio": 2.0,
+    "allow_symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT"
+    ]
+  }
+}

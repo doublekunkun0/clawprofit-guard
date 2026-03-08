@@ -1,0 +1,10 @@
+scenario_id,scenario_label,units,gross_revenue_min,gross_revenue_max,profit_min,profit_max,break_even_units_min,break_even_units_max
+digital_validation,数字验证款,300,5970.00,5970.00,-14507.60,492.40,274,1093
+digital_validation,数字验证款,500,9950.00,9950.00,-10846.00,4154.00,274,1093
+digital_validation,数字验证款,1000,19900.00,19900.00,-1692.00,13308.00,274,1093
+signed_author,传统签约作者,3000,14352.00,17940.00,14352.00,17940.00,0,0
+signed_author,传统签约作者,10000,47840.00,59800.00,47840.00,59800.00,0,0
+self_funded_paper_organic,自费纸书自营（自然流量）,4000,20000,48000,-130000,-32000,6667,30000
+self_funded_paper_organic,自费纸书自营（自然流量）,10000,50000,120000,-100000,40000,6667,30000
+self_funded_paper_paid,自费纸书自营（投流/达人）,4000,0,20000,-150000,-60000,16000,
+self_funded_paper_paid,自费纸书自营（投流/达人）,10000,0,50000,-150000,-30000,16000,

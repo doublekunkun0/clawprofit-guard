@@ -1,0 +1,21 @@
+{
+  "profile": "conservative",
+  "blocked_decision": "BLOCK",
+  "blocked_score": 66.0,
+  "adjusted_decision": "WARN",
+  "adjusted_score": 41.18,
+  "suggestion_used": {
+    "leverage": 3.0,
+    "position_notional_usdt": 1101.22,
+    "stop_loss_price": 90000.0,
+    "take_profit_price": 93900.0,
+    "note": "Hard guardrail triggered. Apply suggested sizing before any execution."
+  },
+  "order_preview_status": "not_configured",
+  "asset_files": [
+    "/Users/kb/Desktop/AI\u81ea\u5a92\u4f53\u89c6\u9891/output/demo/01_profile_recommendation.json",
+    "/Users/kb/Desktop/AI\u81ea\u5a92\u4f53\u89c6\u9891/output/demo/02_trade_blocked.json",
+    "/Users/kb/Desktop/AI\u81ea\u5a92\u4f53\u89c6\u9891/output/demo/03_trade_adjusted.json",
+    "/Users/kb/Desktop/AI\u81ea\u5a92\u4f53\u89c6\u9891/output/demo/04_spot_order_preview.json"
+  ]
+}

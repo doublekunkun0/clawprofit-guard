@@ -1,0 +1,32 @@
+{
+  "decision": "WARN",
+  "risk_score": 41.18,
+  "reasons": [
+    "Risk profile is within acceptable range."
+  ],
+  "blockers": [],
+  "metric_breakdown": {
+    "leverage_risk": 55.57,
+    "volatility_risk": 51.67,
+    "concentration_risk": 27.53,
+    "liquidity_risk": 26.2,
+    "behavior_risk": 21.5,
+    "risk_per_trade_pct": 0.78,
+    "reward_risk_ratio": 2.0,
+    "target_reward_risk_ratio": 2.0,
+    "liquidation_buffer_pct": 28.33
+  },
+  "suggested_plan": {
+    "leverage": 3.0,
+    "position_notional_usdt": 1101.22,
+    "stop_loss_price": 90000.0,
+    "take_profit_price": 93900.0,
+    "note": "Trade allowed with warning. Use smaller sizing and tighter risk controls."
+  },
+  "profile_context": {
+    "mode": "profile_assisted",
+    "profile": "conservative",
+    "profile_score": 12.2,
+    "auto_adjustments": []
+  }
+}
