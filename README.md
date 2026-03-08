@@ -10,7 +10,8 @@ Language:
 - 这是一个面向 `Binance USD-M Futures` 的交易前 AI 风控 Agent
 - 核心闭环：`建档 -> 评估 -> 校验 -> 执行 -> 保护 -> 跟踪`
 - 核心价值：`先防可避免亏损，再追求收益`
-- 当前演示入口：[http://127.0.0.1:8080/demo](http://127.0.0.1:8080/demo)
+- 本地演示入口：[http://127.0.0.1:8080/demo](http://127.0.0.1:8080/demo)
+- 正式部署入口：[Render Blueprint](https://dashboard.render.com/blueprint/new?repo=https://github.com/doublekunkun0/clawprofit-guard)
 
 ClawProfit Guard is a Binance-focused pre-trade AI risk agent for USD-M Futures.
 It helps users do one thing well:
@@ -59,6 +60,20 @@ python3 run.py --serve --host 127.0.0.1 --port 8080
 Open the demo:
 
 - [http://127.0.0.1:8080/demo](http://127.0.0.1:8080/demo)
+
+## Stable Public Deployment
+
+This repo includes a Render Blueprint for a long-lived public demo:
+
+- Deploy link: [Render Blueprint](https://dashboard.render.com/blueprint/new?repo=https://github.com/doublekunkun0/clawprofit-guard)
+- Config file: [render.yaml](./render.yaml)
+- Container entrypoint: [Dockerfile](./Dockerfile)
+
+Deployment notes:
+
+- The public deployment is intentionally configured as a safe demo.
+- `BINANCE_API_KEY` and `BINANCE_SECRET_KEY` are left blank in Render so public visitors cannot access live trading.
+- The app still exposes the full product flow, but account-level live execution should remain local-only.
 
 Health check:
 

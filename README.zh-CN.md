@@ -61,6 +61,20 @@ python3 run.py --serve --host 127.0.0.1 --port 8080
 
 - [http://127.0.0.1:8080/demo](http://127.0.0.1:8080/demo)
 
+## 正式公网部署
+
+仓库已经附带长期稳定部署所需的 Render Blueprint：
+
+- 正式部署入口：[Render Blueprint](https://dashboard.render.com/blueprint/new?repo=https://github.com/doublekunkun0/clawprofit-guard)
+- 部署配置：[render.yaml](./render.yaml)
+- 容器启动配置：[Dockerfile](./Dockerfile)
+
+部署说明：
+
+- 公网版本默认是安全演示模式
+- `BINANCE_API_KEY` 和 `BINANCE_SECRET_KEY` 在 Render 中保持为空，不暴露真实交易能力
+- 评委可以访问完整演示流程，但真实实盘执行建议只保留在本地环境
+
 健康检查：
 
 ```bash

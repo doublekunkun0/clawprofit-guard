@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: clawprofit-guard
+    runtime: docker
+    plan: starter
+    region: singapore
+    branch: main
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: BINANCE_API_KEY
+        value: ""
+      - key: BINANCE_SECRET_KEY
+        value: ""
