@@ -1,5 +1,17 @@
 # ClawProfit Guard | 龙虾合约风控官
 
+Language:
+
+- English: `README.md`
+- 中文版: [README.zh-CN.md](/Users/kb/Desktop/AI自媒体视频/README.zh-CN.md)
+
+中文速览：
+
+- 这是一个面向 `Binance USD-M Futures` 的交易前 AI 风控 Agent
+- 核心闭环：`建档 -> 评估 -> 校验 -> 执行 -> 保护 -> 跟踪`
+- 核心价值：`先防可避免亏损，再追求收益`
+- 当前演示入口：[http://127.0.0.1:8080/demo](http://127.0.0.1:8080/demo)
+
 ClawProfit Guard is a Binance-focused pre-trade AI risk agent for USD-M Futures.
 It helps users do one thing well:
 
