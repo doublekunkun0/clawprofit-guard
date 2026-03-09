@@ -73,6 +73,8 @@ python3 run.py --serve --host 127.0.0.1 --port 8080
 部署说明：
 
 - 公网版本默认是安全演示模式
+- Render Blueprint 当前默认使用 `free` 方案
+- 免费 Web 服务在空闲后可能休眠，适合演示，不适合长期不停机生产环境
 - `BINANCE_API_KEY` 和 `BINANCE_SECRET_KEY` 在 Render 中保持为空，不暴露真实交易能力
 - 评委可以访问完整演示流程，但真实实盘执行建议只保留在本地环境
 

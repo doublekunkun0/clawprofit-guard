@@ -73,6 +73,8 @@ This repo includes a Render Blueprint for a long-lived public demo:
 Deployment notes:
 
 - The public deployment is intentionally configured as a safe demo.
+- The Render Blueprint uses the `free` plan by default.
+- Free web services may spin down after idle time, so this is suitable for public demos but not for always-on production.
 - `BINANCE_API_KEY` and `BINANCE_SECRET_KEY` are left blank in Render so public visitors cannot access live trading.
 - The app still exposes the full product flow, but account-level live execution should remain local-only.
 
