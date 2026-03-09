@@ -14,7 +14,7 @@ It shows how the product can be mounted as an agent workflow without claiming an
 1. Start the local API server:
 
 ```bash
-cd /Users/kb/Desktop/AI自媒体视频
+cd clawprofit-guard
 python3 run.py --serve --host 127.0.0.1 --port 8080
 ```
 

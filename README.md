@@ -53,7 +53,8 @@ It is a pre-trade safety layer for Binance users and AI agents:
 ## Quick Start
 
 ```bash
-cd /Users/kb/Desktop/AI自媒体视频
+git clone https://github.com/doublekunkun0/clawprofit-guard.git
+cd clawprofit-guard
 python3 run.py --serve --host 127.0.0.1 --port 8080
 ```
 
@@ -224,7 +225,7 @@ curl -s -X POST http://127.0.0.1:8080/v1/binance/live-open-order \
   }'
 ```
 
-## Contest Assets
+## Additional Docs
 
 Generate demo assets:
 
@@ -244,12 +245,9 @@ Note:
 - `04_spot_order_preview.json` is a legacy filename.
 - The current product flow is futures-oriented.
 
-Related contest docs:
-
 - [docs/PRD_v1.md](./docs/PRD_v1.md)
-- [docs/DEMO_VIDEO_60S.md](./docs/DEMO_VIDEO_60S.md)
-- [docs/CONTEST_SUBMISSION_CHECKLIST.md](./docs/CONTEST_SUBMISSION_CHECKLIST.md)
-- [docs/FIRST_PRIZE_SUBMISSION.md](./docs/FIRST_PRIZE_SUBMISSION.md)
+- [docs/API_CONTRACT.md](./docs/API_CONTRACT.md)
+- [docs/OPENCLAW_SYSTEM_PROMPT.md](./docs/OPENCLAW_SYSTEM_PROMPT.md)
 - [openclaw/README.md](./openclaw/README.md)
 
 ## Run Tests

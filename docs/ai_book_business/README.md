@@ -46,7 +46,7 @@
 ## 快速命令
 
 ```bash
-cd /Users/kb/Desktop/AI自媒体视频
+cd clawprofit-guard
 python3 scripts/book_launch_model.py
 python3 scripts/generate_book_docx.py
 ```

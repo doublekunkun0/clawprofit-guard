@@ -53,7 +53,8 @@ ClawProfit Guard 是一个面向 `Binance USD-M Futures` 的交易前 AI 风控 
 ## 快速开始
 
 ```bash
-cd /Users/kb/Desktop/AI自媒体视频
+git clone https://github.com/doublekunkun0/clawprofit-guard.git
+cd clawprofit-guard
 python3 run.py --serve --host 127.0.0.1 --port 8080
 ```
 
@@ -173,12 +174,11 @@ curl -s -X POST http://127.0.0.1:8080/v1/binance/live-open-order \
   }'
 ```
 
-## 参赛材料
+## 补充文档
 
 - [产品 PRD](./docs/PRD_v1.md)
-- [60 秒视频脚本](./docs/DEMO_VIDEO_60S.md)
-- [提交清单](./docs/CONTEST_SUBMISSION_CHECKLIST.md)
-- [冠军版提交文案](./docs/FIRST_PRIZE_SUBMISSION.md)
+- [接口约定](./docs/API_CONTRACT.md)
+- [OpenClaw 系统提示词](./docs/OPENCLAW_SYSTEM_PROMPT.md)
 - [OpenClaw 集成说明](./openclaw/README.md)
 
 ## 运行测试
